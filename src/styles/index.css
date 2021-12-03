@@ -2,12 +2,13 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #212529;
+  background-color: #1f2225;
+  user-select: none;
 }
 
 a:link {
   text-decoration: none;
-  color: #e167ff;
+  color: #f0b3ff;
 }
 
 /* HEADER */
@@ -15,10 +16,35 @@ a:link {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #343a40;
+  background-color: #2b3035;
+  height: 60px;
 }
 
 .header-options {
   display: flex;
   gap: 30px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.search-bar-input {
+  background-color: #1f2225;
+  color: #fff;
+  outline: none;
+  border-radius: 10px;
+  border: solid 1px rgb(90, 90, 90);
+  height: 50%;
+  padding: 0 15px;
+}
+
+.search-bar-input::placeholder {
+  color: #f0b3ff8c;
+}
+
+.search-bar-input:focus::placeholder {
+  color: transparent;
 }
