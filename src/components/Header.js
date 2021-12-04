@@ -7,10 +7,10 @@ const Header = () => {
     <header className="main-header">
       <div className="header-options">
         <Link href="#" className="none">
-          Popular
+          Trending
         </Link>
         <Link href="#" className="none">
-          All movies
+          All
         </Link>
       </div>
       <Searchbar />
