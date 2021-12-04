@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Header from './Header';
-import MoviesDisplay from './moviesDisplay';
+import MoviesDisplay from './MoviesDisplay';
 import { getTrending } from '../api/MoviesDB';
-import Button from './Button';
 
 const App = () => {
   const [movies, setMovies] = useState([]);

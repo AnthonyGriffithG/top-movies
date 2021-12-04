@@ -1,7 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   background-color: #1f2225;
   user-select: none;
 }
@@ -72,11 +75,48 @@ a:link {
 }
 
 .movie {
+  position: relative;
   width: 250px;
+  overflow: hidden;
 }
 
 .movie img {
   max-width: 100%;
+  height: 100%;
+}
+
+.overview {
+  background-color: #fff;
+  overflow: auto;
+  max-height: 100%;
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.movie-info {
+  position: absolute;
+  display: flex;
+  width: 250px;
+  align-items: center;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.39);
+  color: #fff;
+  padding: 4px 5px;
+  justify-content: space-between;
+}
+
+.movie:hover .overview {
+  transform: translateY(0%);
+}
+
+.rating {
+  display: flex;
+  align-items: center;
 }
 
 /* BTN */
@@ -100,4 +140,9 @@ a:link {
   justify-content: center;
   margin-top: 10px;
   gap: 20px;
+}
+
+/* ICONS */
+.icon-star {
+  color: rgb(255, 230, 2);
 }
