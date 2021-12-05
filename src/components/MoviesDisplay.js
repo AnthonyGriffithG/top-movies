@@ -4,6 +4,7 @@ import Button from './Button';
 
 const MoviesDisplay = ({ movies, page, onPageChange }) => {
   const renderedMovies = movies.map((movie) => {
+    if (!movie.poster_path) return null;
     const urlImage = `https://image.tmdb.org/t/p/w500/${movie.poster_path}`;
     return (
       <MovieCard
@@ -19,13 +20,19 @@ const MoviesDisplay = ({ movies, page, onPageChange }) => {
 
   return (
     <div className="display-movies-container">
-      <div className="movies">{renderedMovies}</div>
+      {movies.length ? (
+        <div className="movies">{renderedMovies}</div>
+      ) : (
+        <div className="no-movies-msg">No more movies to see</div>
+      )}
+
       <div className="display-buttons">
         {page > 1 ? (
           <Button content="Prev" onClick={() => onPageChange(page - 1)} />
         ) : null}
-
-        <Button content="Next" onClick={() => onPageChange(page + 1)} />
+        {movies.length > 0 ? (
+          <Button content="Next" onClick={() => onPageChange(page + 1)} />
+        ) : null}
       </div>
     </div>
   );

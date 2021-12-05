@@ -4,7 +4,6 @@ import MoviesDisplay from './MoviesDisplay';
 import { searchMovies, trendingURL } from '../api/MoviesDB';
 
 const App = () => {
-  console.log('entro');
   const [movies, setMovies] = useState([]);
   const [page, setPage] = useState(1);
   const [apiUrl, setApiUrl] = useState(trendingURL);
@@ -19,7 +18,7 @@ const App = () => {
 
   return (
     <div>
-      <Header setApiUrl={setApiUrl} setPage={setPage} />
+      <Header setApiUrl={setApiUrl} setPage={setPage} setMovies={setMovies} />
       <MoviesDisplay movies={movies} page={page} onPageChange={setPage} />
     </div>
   );

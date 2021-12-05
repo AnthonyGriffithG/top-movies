@@ -120,6 +120,12 @@ body {
   align-items: center;
 }
 
+.no-movies-msg {
+  text-align: center;
+  color: #fff;
+  margin-top: 40px;
+}
+
 /* BTN */
 .page-btn {
   border: none;

@@ -1,10 +1,17 @@
 import React, { useState } from 'react';
+import { movieURL } from '../api/MoviesDB';
 
-const Searchbar = () => {
+const Searchbar = ({ setApiUrl }) => {
   const [term, setTerm] = useState('');
 
   return (
-    <form className="search-bar">
+    <form
+      className="search-bar"
+      onSubmit={(e) => {
+        e.preventDefault();
+        setApiUrl(`${movieURL}?query=${term}`);
+      }}
+    >
       <input
         className="search-bar-input"
         placeholder="Search movies"

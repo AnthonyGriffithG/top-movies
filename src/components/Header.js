@@ -1,6 +1,6 @@
 import React from 'react';
 import Searchbar from './Searchbar';
-import { upcomingURL, trendingURL, topRatedURL } from '../api/MoviesDB';
+import { popularURL, trendingURL, topRatedURL } from '../api/MoviesDB';
 
 const Header = ({ setApiUrl, setPage }) => {
   const changeApiHelper = (url) => {
@@ -11,8 +11,11 @@ const Header = ({ setApiUrl, setPage }) => {
   return (
     <header className="main-header">
       <div className="header-options">
-        <div className="header-link">
-          <h3>All</h3>
+        <div
+          className="header-link"
+          onClick={() => changeApiHelper(popularURL)}
+        >
+          <h3>Popular</h3>
         </div>
         <div
           className="header-link"
@@ -27,7 +30,7 @@ const Header = ({ setApiUrl, setPage }) => {
           <h3>Top Rated</h3>
         </div>
       </div>
-      <Searchbar />
+      <Searchbar setApiUrl={changeApiHelper} />
     </header>
   );
 };
