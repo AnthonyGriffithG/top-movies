@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import Header from './Header';
 import MoviesDisplay from './MoviesDisplay';
-import { searchMovies, trendingURL } from '../api/MoviesDB';
+import { popularURL, searchMovies } from '../api/MoviesDB';
 
 const App = () => {
   const [movies, setMovies] = useState([]);
   const [page, setPage] = useState(1);
-  const [apiUrl, setApiUrl] = useState(trendingURL);
+  const [apiUrl, setApiUrl] = useState(popularURL);
 
   useEffect(() => {
     const getMovies = async () => {
