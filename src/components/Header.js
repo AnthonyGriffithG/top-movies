@@ -1,17 +1,31 @@
 import React from 'react';
 import Searchbar from './Searchbar';
-import Link from './Link';
+import { upcomingURL, trendingURL, topRatedURL } from '../api/MoviesDB';
 
-const Header = () => {
+const Header = ({ setApiUrl, setPage }) => {
+  const changeApiHelper = (url) => {
+    setApiUrl(url);
+    setPage(1);
+  };
+
   return (
     <header className="main-header">
       <div className="header-options">
-        <Link href="#" className="none">
-          Trending
-        </Link>
-        <Link href="#" className="none">
-          All
-        </Link>
+        <div className="header-link">
+          <h3>All</h3>
+        </div>
+        <div
+          className="header-link"
+          onClick={() => changeApiHelper(trendingURL)}
+        >
+          <h3>Trending</h3>
+        </div>
+        <div
+          className="header-link"
+          onClick={() => changeApiHelper(topRatedURL)}
+        >
+          <h3>Top Rated</h3>
+        </div>
       </div>
       <Searchbar />
     </header>

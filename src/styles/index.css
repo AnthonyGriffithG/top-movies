@@ -9,9 +9,10 @@ body {
   user-select: none;
 }
 
-a:link {
+.header-link {
   text-decoration: none;
   color: #f0b3ff;
+  cursor: pointer;
 }
 
 /* HEADER */
