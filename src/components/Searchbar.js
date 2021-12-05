@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { movieURL } from '../api/MoviesDB';
 
-const Searchbar = ({ setApiUrl }) => {
+const Searchbar = ({ setApiUrl, setActive }) => {
   const [term, setTerm] = useState('');
 
   return (
@@ -9,6 +9,7 @@ const Searchbar = ({ setApiUrl }) => {
       className="search-bar"
       onSubmit={(e) => {
         e.preventDefault();
+        setActive('4');
         setApiUrl(`${movieURL}?query=${term}`);
       }}
     >

@@ -13,6 +13,10 @@ body {
   text-decoration: none;
   color: #f0b3ff;
   cursor: pointer;
+  padding: 0 5px;
+}
+.header-link:hover {
+  background-color: #2b3035;
 }
 
 /* HEADER */
@@ -20,7 +24,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #2b3035;
+  background-color: #23272b;
   height: 60px;
 }
 
