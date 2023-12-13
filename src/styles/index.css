@@ -59,7 +59,7 @@ body {
 
 /* MOVIES CONTAINER */
 .display-movies-container {
-  width: 75%;
+  padding: 0 4em;
   margin: 0 auto;
 }
 
