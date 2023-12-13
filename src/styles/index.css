@@ -83,6 +83,7 @@ body {
   position: relative;
   width: 250px;
   overflow: hidden;
+  max-height: 380px;
 }
 
 .movie img {
@@ -172,5 +173,8 @@ body {
   }
   .header-options h3 {
     margin-bottom: 0;
+  }
+  .movies {
+    max-height: 70vh;
   }
 }

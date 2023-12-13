@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import Header from './Header';
-import MoviesDisplay from './MoviesDisplay';
-import { popularURL, searchMovies } from '../api/MoviesDB';
+import React, { useEffect, useState } from "react";
+import Header from "./Header";
+import MoviesDisplay from "./MoviesDisplay";
+import { popularURL, searchMovies } from "../api/MoviesDB";
 
 const App = () => {
   const [movies, setMovies] = useState([]);
@@ -17,7 +17,7 @@ const App = () => {
   }, [page, apiUrl]);
 
   return (
-    <div>
+    <div className="app-wrapper">
       <Header setApiUrl={setApiUrl} setPage={setPage} setMovies={setMovies} />
       <MoviesDisplay movies={movies} page={page} onPageChange={setPage} />
     </div>
