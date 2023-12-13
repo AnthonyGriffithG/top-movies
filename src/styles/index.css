@@ -170,6 +170,7 @@ body {
   .search-bar-input {
     height: 80%;
     min-width: 310px;
+    font-size: 18px;
   }
   .header-options h3 {
     margin-bottom: 0;
